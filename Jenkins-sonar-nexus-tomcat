@@ -34,7 +34,7 @@ pipeline{
                   nexusUrl: '10.20.0.62:8081', 
                   nexusVersion: 'nexus3', 
                   protocol: 'http', 
-                  repository: 'Release-build', 
+                  repository: 'Release-build-mtr', 
                   version: '8.2.3'  
               }
             }
