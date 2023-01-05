@@ -25,7 +25,7 @@ pipeline{
                        [
                             artifactId: 'myweb', 
                             classifier: '', 
-                            file: "var/lib/jenkins/workspace/Ghana-PipelineProject/target/myweb-8.2.3.war", 
+                            file: "target/myweb-8.2.3.war", 
                             type: 'war'
                        ]
                   ], 
