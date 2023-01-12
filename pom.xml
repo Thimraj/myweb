@@ -37,7 +37,7 @@
 		
 		<repository>
 		    <id>nexusRepo</id>
-		    <url>http://172.31.15.3:8181/repository/Release-build/</url>
+		    <url>http://172.31.15.3:8181/repository/Mtr-Release/</url>
 		</repository>
   	</distributionManagement>
 	
