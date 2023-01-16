@@ -31,16 +31,16 @@ pipeline{
                   ], 
                   credentialsId: 'nexus3', 
                   groupId: 'in.javahome', 
-                  nexusUrl: '172.31.13.89:8081', 
+                  nexusUrl: '172.31.2.241:8081', 
                   nexusVersion: 'nexus3', 
                   protocol: 'http', 
-                  repository: 'sample-releases', 
+                  repository: 'sample-release', 
                   version: '8.2.0'  
               }
             }
         stage("Execute Ansible"){
             steps{
-                ansiblePlaybook credentialsId: 'private-key', disableHostKeyChecking: true, installation: 'ansible2', inventory: 'dev.in', playbook: 'copy.yml'
+                  ansiblePlaybook credentialsId: 'AnsibleId', disableHostKeyChecking: true, installation: 'Ansible2', inventory: 'dev.in', playbook: 'copy.yml'
             }
            
         }
