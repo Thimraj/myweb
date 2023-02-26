@@ -1,6 +1,6 @@
 node {
-    stage('Git'){
-      git 'https://github.com/Thimraj/myweb'    
+    stage('Git Checkout'){
+      git credentialsId: 'javahome2',url: 'https://github.com/javahometech/my-app   
       
       
       
