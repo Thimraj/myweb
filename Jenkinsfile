@@ -2,8 +2,8 @@ try{
 	node{
 	    properties([parameters([choice(choices: ['master', 'dev', 'qa', 'staging'], description: 'Choose branch to build and deploy', name: 'gitBranch')]), pipelineTriggers([pollSCM('')])])
     stage('Git Checkout'){
-		git credentialsId: 'github', 
-		    url: 'https://github.com/javahometech/my-app',
+		git credentialsId: 'javahome2', 
+		    url: 'https://github.com/Thimraj/myweb',
 			branch: "${params.gitBranch}"
 	}
 	
