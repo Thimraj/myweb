@@ -16,7 +16,7 @@ pipeline{
                 sh "mv target/*.war target/myweb.war"
             }
         }
-        stage("clean deploy"){
+        stage("deploy to tomcat"){
             steps{
                 sshagent(['tomcatid']) {
                 sh """
