@@ -38,14 +38,14 @@ pipeline{
                   version: '8.2.0'  
               }
             }
-        stage('Build Docker Image'){
+        stage('Build Docker Image & Create Container'){
             steps{
                  sh 'docker build -t dockerthimraj/spring-boot-mongo .'
                  sh 'docker build -t tomcat:${BUILD_NUMBER} .'
                  sh 'docker run -itd --name mycont1 -p 3900:8080 tomcat:${BUILD_NUMBER}'
              }
          }
-        stage('Push Docker Image'){
+        stage('Push Image into DockerHub'){
              steps{
                   withCredentials([string(credentialsId: 'DOCKER_HUB_CREDENTIALS', variable: 'DOCKER_HUB_CREDENTIALS')]) {
                       sh "docker login -u dockerthimraj -p ${DOCKER_HUB_CREDENTIALS}"
