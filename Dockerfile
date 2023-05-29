@@ -1,4 +1,7 @@
+         # Pull base Image from Dockerhub
 FROM tomcat:8.0.20-jre8
-# Dummy text to test 
+         # Maintainer
+MAINTAINER "iamthimmarajuaws@gmail.com" 
+         # Dummy text to test 
 COPY target/myweb*.war /usr/local/tomcat/webapps/myweb.war
 
